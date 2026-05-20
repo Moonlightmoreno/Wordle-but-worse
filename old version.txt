@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Game</title>
+        <link rel="stylesheet" href="game.css">
+        <script src="game.js"></script>
+    </head>
+    <body onload="start();">
+        <center><div id="row1" class="row"></div>
+            <input type="text" class="a1" oninput="fokusNext(this,0)" maxlength="1">
+            <input type="text" class="a2" oninput="fokusNext(this,0)" maxlength="1">
+            <input type="text" class="a3" oninput="fokusNext(this,0)" maxlength="1">
+            <input type="text" class="a4" oninput="fokusNext(this,0)" maxlength="1">
+            <input type="text" class="a5" oninput="fokusNext(this,0)" maxlength="1">
+        </div></center>
+    </body>
+</html>
+
+//words from https://cdn.learningvillage.net/sites/default/files/highfrequencywords_2000_1.pdf
+let line = 1;
+let back = false;
+let coordEle = 'a1';
+function start(){
+    document.addEventListener('keydown',function(event){
+        if (event.key==='Backspace'){
+            let eles = document.getElementsByClassName(coordEle).item(0);
+            fokusNext(eles,1);
+        }
+    } );
+}
+function fokusNext(obj,grr){
+    let classes = Array.from(obj.classList);
+    let GoodCl = classes.find(findRClass);
+    let index = parseInt(GoodCl.substring(1));
+    if (grr==0){
+        index += 1;
+    }
+    else if (grr==1){
+        index -= 1;
+    }
+    let nm = 'a'+index.toString();
+    coordEle = nm;
+    let final = document.getElementsByClassName(nm).item(0);
+    final.focus();
+}
+function findRClass(cl){
+    if (cl.startsWith('a')){
+        return cl;
+    }
+}

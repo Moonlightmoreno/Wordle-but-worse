@@ -1,0 +1,21 @@
+body {
+  background-color: powderblue;
+}
+.field{
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  margin: 10px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  opacity: 0;
+}
