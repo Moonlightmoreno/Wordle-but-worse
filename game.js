@@ -10,9 +10,18 @@ function start(){
             alert(word==document.getElementById("inp").value);
 
             let real = word.split('');
-            //let given = document.getElementById("inp").value.slpit('');
-            //alert(real[0]);
-            //alert(given[0]);
+            let given = String(document.getElementById("inp").value).split('');
+            alert(real); 
+            alert(given);
+
+            for (let i = 1; i <= given.length; i++){
+                if (real[i-1]==given[i-1]){
+                    document.getElementById(String.fromCharCode(96 + curRow) + i).parentNode.style.animation = "bggreen 2s ease-in-out forwards";
+                }
+                else if(word.includes(given[i-1])){
+                    document.getElementById(String.fromCharCode(96 + curRow) + i).parentNode.style.animation = "bgyellow 0.5s ease-in-out forwards";
+                }
+            }
 
             curRow += 1;
             //alert(document.getElementById("inp").value);
