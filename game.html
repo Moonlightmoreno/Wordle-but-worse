@@ -8,6 +8,8 @@
         <script src="game.js"></script>
     </head>
     <body onload="start();">
+        <div class="overlay" id="overnew"><center><p id="New Game"></p><button onclick="location.reload()">Play Again</button></center></div>
+        <div class="invalidanimation" id="overtext"><center><p id="Wrong Word"></p></center></div>
         <center><h1>Wordle but Worse</h1></center>
         <div id="row1" class="row">
             <div class="field"><p id="a1"></p></div>
@@ -52,5 +54,39 @@
             <div class="field"><p id="f5"></p></div>
         </div>
         <input type="text" id="inp" maxlength="5" oninput="adjustFields()">
+        <div class="keyboard" id="kbrow1">
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="q">Q</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="w">W</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="e">E</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="r">R</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="t">T</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="y">Y</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="u">U</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="i">I</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="o">O</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="p">P</p></div>
+        </div>
+        <div class="keyboard" id="kbrow2">
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="a">A</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="s">S</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="d">D</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="f">F</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="g">G</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="h">H</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="j">J</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="k">K</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="l">L</p></div>
+        </div>
+        <div class="keyboard" id="kbrow3">
+            <div class="EnterKey" onclick="kbclick(this)"><p id="enter">Enter</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="y">Y</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="x">X</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="c">C</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="v">V</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="b">B</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="n">N</p></div>
+            <div class="keyboard-key" onclick="kbclick(this)"><p id="m">M</p></div>
+            <div class="BackKey" onclick="kbclick(this)"><p id="backspace">Backspace</p></div>
+        </div>
     </body>
 </html>
