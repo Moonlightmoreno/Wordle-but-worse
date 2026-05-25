@@ -3,12 +3,20 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Test</title>
+        <title>Wordle Games</title>
         <link rel="stylesheet" href="main.css">
         <script src="main.js"></script>
     </head>
     <body>
-        <h1 id="stGame" class = "green"><center>Block Game</center></h1>
-        <button type="button" href="game.html" onclick="startBlock()" class="startG" id="GameB"><center>Try it</center></button>
+        <h1 id="title"><center>Wordle Games</center></h1>
+        <div class="boxdiv">
+            <button type="button" href="game.html?language=english" onclick="Wordlebtn()" class="Wordle" id="WordleBtn"><center>Try them</center></button>
+        </div>
+        <div class="boxdiv">
+            <button type="button" href="game.html?language=german" onclick="WordleGerbtn()" class="Wordle" id="WordleGerBtn"><center>German Wordle</center></button>
+        </div>
+        <div class="boxdiv">
+            <button type="button" href="game.html" onclick="Mathlebtn()" class="Mathle" id="MathleBtn"><center>Mathle</center></button>
+        </div>
     </body>
 </html>

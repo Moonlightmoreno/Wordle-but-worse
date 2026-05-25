@@ -66,6 +66,9 @@ input{
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+.keyboard-key:hover{
+  background-color:rgba(41, 41, 41, 0.5);
+}
 .BackKey{
   width: 90px;
   height: 40px;
@@ -75,6 +78,12 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.BackKey:hover{
+  background-color:rgba(41, 41, 41, 0.5);
 }
 .EnterKey{
   width: 80px;
@@ -85,6 +94,12 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.EnterKey:hover{
+  background-color:rgba(41, 41, 41, 0.5);
 }
 .overlay {
   position: fixed;
