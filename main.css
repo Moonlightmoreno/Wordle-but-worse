@@ -1,39 +1,69 @@
 body {
   background-color: powderblue;
-  width: 100vw;
-  height: 100vh;
+}
+.part{
+  width: 101vw;
+  height: 101vh;
+  position: fixed;
+  top: -1vh;
+  left: -1vw;
 }
 h1{
   font-family: 'Brush Script MT', cursive;
   text-align: center;
 }
+button{
+  border-radius: 5px;
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  align-items: center;
+  z-index: 2;
+}
 .Wordle{
   text-align: center;
   background-color:rgb(255, 153, 0);
-  margin-left:auto;
-  margin-right:auto;
+  left: 10px;
   display:block;
-}
+} 
 .Wordle:hover{
   background-color:rgb(255, 255, 0, 0.5);
 }
 #WordleGerBtn{
   visibility: hidden;
 }
+#title{
+  position: relative;
+  margin-top: 20px;
+  left: 10px;
+  z-index: 2;
+}
 .boxdiv{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
 }
 .Mathle{
   text-align: center;
   background-color:rgb(206, 13, 13);
-  margin-left:auto;
-  margin-right:auto;
+  left: 200%;
   display:block;
   visibility: hidden;
 }
 .Mathle:hover{
-  background-color:rgb(173, 216, 230, 0.5);
+  background-color:rgb(255, 255, 0, 0.5);
+}
+.overlay {
+  position: fixed;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
 }

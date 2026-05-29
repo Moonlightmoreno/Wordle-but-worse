@@ -1,1 +1,4 @@
+.gitignore
 process.py
+txttojson.py
+.vscode/

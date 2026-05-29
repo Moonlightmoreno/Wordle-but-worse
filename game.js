@@ -4,8 +4,8 @@
 let curRow = 1;
 let win = false;
 var date = new Date().getDate();
-function start(){
-    loadWord();
+async function start(){
+    await loadWord();
     const input = document.getElementById("inp");
     input.focus(    );
     document.addEventListener('click',function(event){
@@ -15,7 +15,7 @@ function start(){
         if (event.key==='Enter' && document.getElementById("inp").value.length == 5 && !win && ArrWord.includes(document.getElementById("inp").value.toLowerCase())){
             //alert(word==document.getElementById("inp").value);
 
-            let real = word.split('');
+            let real = word.toLowerCase().split('');
             let given = String(document.getElementById("inp").value.toLowerCase()).split('');
             //alert(real); 
             //alert(given);
@@ -45,7 +45,7 @@ function start(){
                 }*/
             }
             curRow += 1;
-            if (curRow == 7){
+            if (curRow == 7 && !win){
                 win = true;
                 document.getElementById("overnew").style.display = "block";
                 document.getElementById("New Game").textContent = "You lose! The word was " + word + " " + String.fromCodePoint(0x1F614);
@@ -80,25 +80,22 @@ async function loadWord() {
     const params = new URLSearchParams(window.location.search);
     const language = params.get('language'); 
     let data;
-    let lendata;
     if (language === 'german') {
         const res = await fetch('words_german.json');
         data = await res.json();
-        lendata = 4539;
     } 
     if (language === 'english') {
         const res = await fetch('words.json');
         data = await res.json();
-        lendata = 5708;
     }
     Object.defineProperty(window, 'ArrWord', {
-        value: data.slice(0,lendata),
+        value: data.slice(0,data.length),
         writable: false,
         configurable: false
     });
     //alert(grr[RandNum]);
     Object.defineProperty(window, 'word', {
-        value: ArrWord[Math.floor(Math.random() * lendata)],
+        value: ArrWord[Math.floor(Math.random() * data.length)],
         writable: false,
         configurable: false
     });

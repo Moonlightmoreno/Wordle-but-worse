@@ -1,3 +1,6 @@
+function start(){
+    loadParticles();
+}
 function Wordlebtn() {
     document.getElementById("title").innerHTML = "Select Game Mode";
     document.getElementById("WordleBtn").innerHTML = "Wordle";
@@ -11,5 +14,10 @@ function WordleGerbtn() {
     window.location.href = "game.html?language=german";
 }
 function Mathlebtn() {
-    window.location.href = "game.html";
+    window.location.href = "mathle.html";
+}
+function loadParticles(){
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
 }
