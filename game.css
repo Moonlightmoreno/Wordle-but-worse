@@ -151,6 +151,15 @@ input{
   pointer-events: none;
   animation: invalid 1s ease-in-out forwards;
 }
+.menu-button{
+  border-radius: 5px;
+  margin: 10px;
+  width: 120px;
+  height: 50px;
+  border: 1px solid black;
+  align-items: center;
+  z-index: 2;
+}
 
 @keyframes bggreen{
   0%{

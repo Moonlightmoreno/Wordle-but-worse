@@ -14,42 +14,42 @@ async function start(){
     document.addEventListener('keydown',function(event){
         if (event.key==='Enter' && document.getElementById("inp").value.length == 8 && !win && calcWorks(document.getElementById("inp").value)){
             let real = (String(numb1) + String(operator) + String(numb2) + String(result)).split('');
-            alert(real);
+            //alert(real);
             let given = String(document.getElementById("inp").value).split('');
-            alert(given);
-            alert("precolor");
+            //alert(given);
+            //alert("precolor");
 
             for (let i = 1; i <= given.length; i++){
                 if (real[i-1]==given[i-1]){
-                    alert("pregreen");
+                    //alert("pregreen");
                     document.getElementById(String.fromCharCode(96 + curRow) + i).parentNode.style.animation = "bggreen 2s ease-in-out forwards";
-                    alert(given[i-1]);
+                    //alert(given[i-1]);
                     document.getElementById(real[i-1]).parentNode.style.animation = "bggreen 2s ease-in-out forwards";
-                    alert("green");
+                    //alert("green");
                 }
                 else if(real.includes(given[i-1])){
-                    alert("preyellow");
+                    //alert("preyellow");
                     document.getElementById(String.fromCharCode(96 + curRow) + i).parentNode.style.animation = "bgyellow 0.5s ease-in-out forwards";
-                    alert(given[i-1]);
+                    //alert(given[i-1]);
                     document.getElementById(given[i-1]).parentNode.style.animation = "bgyellow 0.5s ease-in-out forwards";
-                    alert("yellow");
+                    //alert("yellow");
                 }
                 else{
-                    alert("pregray");
+                    //alert("pregray");
                     document.getElementById(String.fromCharCode(96 + curRow) + i).parentNode.style.animation = "bggray 0.5s ease-in-out forwards";
-                    alert(given[i-1]);
+                    //alert(given[i-1]);
                     document.getElementById(given[i-1]).parentNode.style.animation = "bggray 0.5s ease-in-out forwards";
-                    alert("gray");
+                    //alert("gray");
                 }
             }
-            alert("pretrue");
+            //alert("pretrue");
             if (calctrue(document.getElementById("inp").value)){
                 win = true;
                 document.getElementById("overnew").style.display = "block";
                 document.getElementById("New Game").textContent = "You win! The Equation was " + String(numb1) + String(operator) + String(numb2) + " = " + String(result) + " " + String.fromCodePoint(0x1F973);
             }
             curRow += 1;
-            alert(curRow);
+            //alert(curRow);
             if (curRow == 6 && !win){
                 win = true;
                 document.getElementById("overnew").style.display = "block";
@@ -81,28 +81,28 @@ async function loadMath() {
     let operator;
     switch (Math.floor(Math.random() * 4)){
         case 0:
-            while (!(-1<result && result<1000 && result === Math.round(result))){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
                 numb1 = Math.floor(Math.random() * 1000);
                 numb2 = Math.floor(Math.random() * 1000);
                 result = numb1 + numb2;
                 operator = "+";
             }
         case 1:
-            while (!(-1<result && result<1000 && result === Math.round(result))){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
                 numb1 = Math.floor(Math.random() * 1000);
                 numb2 = Math.floor(Math.random() * 1000);
                 result = numb1 - numb2;
                 operator = "-";
             }
         case 2:
-            while (!(-1<result && result<1000 && result === Math.round(result))){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
                 numb1 = Math.floor(Math.random() * 100);
                 numb2 = Math.floor(Math.random() * 10);
                 result = numb1 * numb2;
                 operator = "*";
             }
         case 3:
-            while (!(-1<result && result<1000 && result === Math.round(result))){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
                 numb1 = Math.floor(Math.random() * 1000);
                 numb2 = Math.floor(Math.random() * 10) + 1;
                 result = numb1 / numb2;
@@ -131,7 +131,7 @@ async function loadMath() {
     });
 }
 function kbclick(grr){
-    const txt = grr.childNodes[0].textContent;
+    const txt = grr.childNodes[0].textContent.toLowerCase();
     if (txt !== "enter" && txt !== "backspace"){
         document.getElementById("inp").value += txt;
         adjustFields();
@@ -158,7 +158,7 @@ function calcWorks(given){
             n1 = parseInt(given.slice(0,i).join(''));
             n2 = parseInt(given.slice(i+1,given.length-3).join(''));
             res = parseInt(given.slice(given.length-3,given.length).join(''));
-            alert(n1 + " " + op + " " + n2 + " = " + res);
+            //alert(n1 + " " + op + " " + n2 + " = " + res);
         }
     }
     if (op === -1) {
@@ -166,22 +166,23 @@ function calcWorks(given){
     }
     switch (op){
         case "+":
-            alert(n1 + n2 == res);
+            //alert(n1 + n2 == res);
             return n1 + n2 == res;
         case "-":
-            alert(n1 - n2 == res);
+            //alert(n1 - n2 == res);
             return n1 - n2 == res;
         case "*":
-            alert(n1 * n2 == res);
+            //alert(n1 * n2 == res);
             return n1 * n2 == res;
         case "/":
-            alert(n1 / n2 == res);
+            //alert(n1 / n2 == res);
             return n1 / n2 == res;
     }
 }
 
 function calctrue(given){
-    let real = String(numb1) + String(operator) + String(numb2) + " = " + String(result);
+    let real = String(numb1) + String(operator) + String(numb2) + String(result);
+    //alert(real);
     given = given.split('');
     for (let i = 0; i < given.length; i++){
         if (given[i] != real[i]){
