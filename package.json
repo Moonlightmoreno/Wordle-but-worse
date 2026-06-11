@@ -1,0 +1,34 @@
+{
+  "name": "wordle-but-worse",
+  "version": "1.0.0",
+  "description": "I programm Wordle Games",
+  "keywords": [
+    "Wordle"
+  ],
+  "homepage": "https://github.com/Moonlightmoreno/Wordle-but-worse#readme",
+  "bugs": {
+    "url": "https://github.com/Moonlightmoreno/Wordle-but-worse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moonlightmoreno/Wordle-but-worse.git"
+  },
+  "license": "MIT",
+  "author": "Moonlightmoreno",
+  "type": "commonjs",
+  "main": "main.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0"
+  }
+}

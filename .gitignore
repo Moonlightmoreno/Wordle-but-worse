@@ -1,4 +1,5 @@
-.gitignore
 process.py
 txttojson.py
 .vscode/
+node_modules/
+dist/
