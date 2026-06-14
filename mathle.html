@@ -8,11 +8,15 @@
         <script src="mathle.js"></script>
     </head>
     <body class="part" onload="start();">
-        <div class="overlay" id="overnew"><center><p id="New Game"></p><button onclick="location.reload()">Play Again</button></center></div>
+        <div class="overlay" id="overnew"><center><p id="New Game"></p><button onclick="location.reload()" class="text-xs py-1 px-2 bg-blue-500 hover:bg-blue-700 cursor-pointer">Play Again</button></center></div>
         <div class="invalidanimation" id="overtext"><center><p id="Wrong Word"></p></center></div>
-        <div>
-            <button onclick="location.href='main.html'" class="menu-button">Back to Menu</button>
-            <center><h1>Mathle but Worse</h1></center>
+        <div class="relative size-32 w-full">
+            <div class="absolute right-0 top-0">
+                <button onclick="location.href='main.html'" class="text-xs py-1 px-2 bg-blue-500 hover:bg-blue-700 cursor-pointer">Back to Menu</button>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <p class="text-center text-red-500 font-bold font-serif text-3xl pointer-events-none">Mathle but Worse</p>
+            </div>
         </div>
         <div id="row1" class="row">
             <div class="field"><p id="a1"></p></div>
