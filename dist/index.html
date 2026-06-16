@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Wordle Games</title>
+        <script src="main.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-CgQa85kX.css">
+    </head>
+    <body class="part" onload="start();">
+        <div class="overlay" id="particles-js"></div>
+        <h1 id="title" class="m-5 p-1 text-white text-3xl font-bold rounded-xl text-center shadow-2xl">Wordle Games</h1>
+        <div class="boxdiv">
+            <button type="button" href="game.html?language=german" onclick="WordleGerbtn()" class="Wordle" id="WordleGerBtn">German Wordle</button>
+            <button type="button" href="game.html?language=english" onclick="Wordlebtn()" class="Wordle" id="WordleBtn">Try them</button>
+            <button type="button" href="mathle.html" onclick="Mathlebtn()" class="Mathle" id="MathleBtn">Mathle</button>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 text-center">
+            <p>
+            As a warning i'm still learning and so this projeckt wont be perfeckt.  
+            Mathle may take anywhere from 0.1 seconds to forever to load. Or it will crash.
+            </p>
+        </div>
+        <!--<model-viewer src="Menu.glb" alt="avatar" shadow-intensity="0" 
+        camera-controls
+        style="width: 100%; height: 500px;">
+        </model-viewer>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script> -->
+        <div id="root"></div>
+        <script src="particles.js"></script>
+    </body>
+</html>
