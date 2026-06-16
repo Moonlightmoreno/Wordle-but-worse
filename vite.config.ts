@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: 'main.html',
+        main: 'index.html',
         game: 'game.html',
         mathle: 'mathle.html'
       }
@@ -16,6 +16,6 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    open: '/main.html'
+    open: '/index.html'
   }
 })

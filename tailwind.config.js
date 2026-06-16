@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./main.html",
+    "./index.html",
     "./game.html",
     "./mathle.html",
     "./**/*.js",
