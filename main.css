@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@view-transition{
+  navigation: auto;
+}
+::view-transition-group(myElement){
+  animation-duration: 1s;
+}
 body {
   background-color: powderblue;
 }

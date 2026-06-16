@@ -96,7 +96,7 @@ async function loadMath() {
             }
         case 2:
             while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
-                numb1 = Math.floor(Math.random() * 100);
+                numb1 = Math.floor(Math.random() * 10);
                 numb2 = Math.floor(Math.random() * 10);
                 result = numb1 * numb2;
                 operator = "*";
