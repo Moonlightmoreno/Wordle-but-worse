@@ -16,7 +16,7 @@
   "license": "MIT",
   "author": "Moonlightmoreno",
   "type": "commonjs",
-  "main": "main.html",
+  "main": "index.html",
   "scripts": {
     "test": "vitest",
     "dev": "vite",
