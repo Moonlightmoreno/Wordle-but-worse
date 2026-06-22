@@ -6,7 +6,7 @@
   animation-duration: 1s;
 }
 body {
-  background-color: powderblue;
+  background-color:#1E4D52;
 }
 .part{
   width: 101vw;
@@ -55,6 +55,7 @@ button{
   background-color:rgb(255, 255, 0, 0.5);
 }
 .overlay {
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   display: block;
   justify-content: center;
