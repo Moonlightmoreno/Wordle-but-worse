@@ -81,32 +81,36 @@ async function loadMath() {
     let operator;
     switch (Math.floor(Math.random() * 4)){
         case 0:
-            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length +String(numb2).length == 4 && String(result).length == 3)){
                 numb1 = Math.floor(Math.random() * 1000);
-                numb2 = Math.floor(Math.random() * 1000);
+                numb2 = Math.floor(Math.random() * (1000 - String(numb1).length));
                 result = numb1 + numb2;
                 operator = "+";
+                console.log(numb1 + " " + operator + " " + numb2 + " = " + result);
             }
         case 1:
-            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length +String(numb2).length == 4 && String(result).length == 3)){
                 numb1 = Math.floor(Math.random() * 1000);
                 numb2 = Math.floor(Math.random() * 1000);
                 result = numb1 - numb2;
                 operator = "-";
+                console.log(numb1 + " " + operator + " " + numb2 + " = " + result);
             }
         case 2:
-            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
-                numb1 = Math.floor(Math.random() * 10);
-                numb2 = Math.floor(Math.random() * 10);
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length +String(numb2).length == 4 && String(result).length == 3)){
+                numb1 = Math.floor(Math.random() * 100);
+                numb2 = Math.floor(Math.random() * 100);
                 result = numb1 * numb2;
                 operator = "*";
+                console.log(numb1 + " " + operator + " " + numb2 + " = " + result);
             }
         case 3:
-            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length + 1 + String(numb2).length + 3 == 8)){
+            while (!(-1<result && result<1000 && result === Math.round(result) && String(numb1).length +String(numb2).length == 4 && String(result).length == 3)){
                 numb1 = Math.floor(Math.random() * 1000);
                 numb2 = Math.floor(Math.random() * 10) + 1;
                 result = numb1 / numb2;
                 operator = "/";
+                console.log(numb1 + " " + operator + " " + numb2 + " = " + result);
             }
     }
     Object.defineProperty(window, 'numb1', {
@@ -155,6 +159,9 @@ function calcWorks(given){
     for (let i = 0; i < given.length; i++){
         if (given[i] == "+" || given[i] == "-" || given[i] == "*" || given[i] == "/"){
             op = given[i];
+            if (given[i] == " "){
+                return false;
+            }
             n1 = parseInt(given.slice(0,i).join(''));
             n2 = parseInt(given.slice(i+1,given.length-3).join(''));
             res = parseInt(given.slice(given.length-3,given.length).join(''));
